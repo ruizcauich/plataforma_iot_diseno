@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <meta http-equiv="refresh" content="2; url=index.html"> -->
+    <title>Panel de control</title>
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="static/css/dashboard/style.css">
+    <link rel="stylesheet" href="static/css/dashboard/elementos-resumen.css">
+    <link rel="stylesheet" href="static/css/botones.css">
+</head>
+<body>
+    <aside id="tablero">
+        <header>
+            <figure class="marca">
+                <img src="static/img/logo.png" alt="This is the logo">
+            </figure>
+            <section class="info-usuario">
+                <figure>
+                    <img src="static/img/avatar/usr.jpg" alt="avatar">
+                    <figcaption>
+                        <span class="nueva-linea">¡Bienvenido</span>
+                        <span class="nueva-linea"><strong>Augusto Ruiz</strong></span>
+                    </figcaption>
+                </figure>
+                
+            </section>
+        </header>
+        <nav>
+           <h1 id="titulo-navegacion">General</h1>
+            <ul>
+                <li class="activo"><a href="#">Mis proyectos.</a></li>
+                <li class="submenu"><a href="#">item <span class="ion-chevron-down"></span></a>
+                    <ul>
+                        <li><a href="#">subitem</a></li>
+                        <li><a href="#">subitem</a></li>
+                        <li class="submenu"><a href="#">item <span class="ion-chevron-down"></span></a>
+                            <ul>
+                                <li class="submenu"><a href="#">item <span class="ion-chevron-down"></span></a>
+                                    <ul>
+                                        <li><a href="#">322</a></li>
+                                        <li><a href="#">34534</a></li>
+                                        <li><a href="#">23335</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">34534</a></li>
+                                <li><a href="#">23335</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">subitem</a></li>
+                    </ul>
+                </li>
+                
+                <li><a href="#">item</a></li>
+                <li><a href="#">item</a></li>
+            </ul>
+        </nav>
+        <footer>
+            Footer
+        </footer>
+    </aside>
+    <div id="principal">
+        <header class="cabecera-principal">
+           <div class="caja-informacion"><h3>10</h3></div>
+           <div class="caja-informacion"><h3>50</h3></div>
+           <div class="caja-informacion"><h3>250</h3></div>
+        </header>
+        <div class="contenido">
+            <h1>Proyectos creados.</h1>
+            <table class="tabla-datos">
+                <tr class="encabezado-tabla"r>
+                    <th>Nombre</th>
+                    <th>Descripcion[...]</th>
+                    <th>Acciones</th>
+                </tr>
+                <tr>
+                    
+                    <td>Red invernadero CTBTA</td>
+                    <td>Encargado de recolectar dados del invernadero del ctbta 11</td>
+                    <td>
+                        <button>op + 1</button>
+                        <button>op + 2</button>
+                        <button>op + 3</button>
+                    </td>
+                </tr>
+                <tr>
+                    
+                    <td>Red invernadero CTBTA</td>
+                    <td>Encargado de recolectar dados del invernadero del ctbta 11</td>
+                    <td>
+                        <button>op + 1</button>
+                        <button>op + 2</button>
+                        <button>op + 3</button>
+                    </td>
+                </tr> <tr>
+                    
+                    <td>Red invernadero CTBTA</td>
+                    <td>Encargado de recolectar dados del invernadero del ctbta 11</td>
+                    <td>
+                        <button>op + 1</button>
+                        <button>op + 2</button>
+                        <button>op + 3</button>
+                    </td>
+                </tr> <tr>
+                    
+                    <td>Red invernadero CTBTA</td>
+                    <td>Encargado de recolectar dados del invernadero del ctbta 11</td>
+                    <td>
+                        <button>op + 1</button>
+                        <button>op + 2</button>
+                        <button>op + 3</button>
+                    </td>
+                </tr>
+            </table>
+
+           <section>
+               <input type="button" class="boton" value="boton1">
+               <input type="button" class="boton boton-informacion" value="boton2">
+               <input type="button" class="boton boton-exito" value="boton3">
+               <input type="button" class="boton boton-advertencia" value="boton4">
+               <input type="button" class="boton boton-peligro" value="boton5">
+           </section>
+            <section class="grupo-boton">
+                <input class="boton" type="button" value="boton2">
+                <input class="boton boton-informacion" type="button" value="boton2">
+                <input class="boton boton-exito" type="button" value="boton3">
+                <input class="boton boton-advertencia" type="button" value="boton4">
+                <input class="boton boton-peligro" type="button" value="boton5">
+            </section>
+            <br><br>
+            <section class="grupo-boton-bordeado">
+                <input class="boton" type="button" value="boton2">
+                <input class="boton boton-informacion" type="button" value="boton2">
+                <input class="boton boton-exito" type="button" value="boton3">
+                <input class="boton boton-advertencia" type="button" value="boton4">
+                <input class="boton boton-peligro" type="button" value="boton5">
+            </section>
+            <br><br>
+            <section class="grupo-boton-bordeado">
+                <input class="boton boton-exito" type="button" value="boton3">
+                <input class="boton boton-exito" type="button" value="boton3">
+                <input class="boton boton-exito" type="button" value="boton3">
+                <input class="boton boton-exito" type="button" value="boton3">
+            </section>
+            
+        </div>
+    </div>
+</body>
+</html>

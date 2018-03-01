@@ -1,0 +1,214 @@
+
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+/* 
+    ====================================
+    CONFIGURACIÓN GLOBAL DE ESTILOS
+    ====================================
+*/
+
+body{ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
+body, #tablero, #tablero > nav >ul li{
+    background-color: #2A3F54;
+}
+#tablero{
+    display: block;
+    float: left;
+    width: 20%;
+   
+}
+#principal{
+    display: block;
+    float: left;
+    width: 80%;
+    min-height: 100vh;
+    height: auto;
+    
+}
+#principal{
+    background-color: #FFF;
+}
+
+/* 
+    ====================================
+    CONFIGURACIÓN  DE ESTILOS DEL TABLERO
+    ====================================
+*/
+
+/* #tablero header{
+    position: fixed;
+    display: block;
+    width: 20%;
+} */
+/* 
+    -- Estilos del header del tablero --
+*/
+figure.marca img{
+    width: 100%;
+}
+section.info-usuario{
+    display: block;
+    position: relative;
+}
+section.info-usuario figure img{
+    width: 60px;
+    margin-left: 5px;
+    border-radius: 90px;
+    border-color: #fff;
+    border: #fff 2px solid;
+
+    vertical-align: middle;
+}
+section.info-usuario figure figcaption{
+    width: 50%px;
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: middle;
+    color: #d1d6db;
+     
+}
+/* 
+    -- Estilos del menú de navegación --
+*/
+#tablero nav #titulo-navegacion{
+    color: #fff;
+    text-transform: uppercase;
+    margin-top: 5px;
+    padding-left: 10px;
+}
+#tablero nav ul{
+    list-style: none;
+    padding: 0px;
+}
+#tablero > nav >ul >li{
+    border: #445b72 1px outset;
+ 
+  
+}
+
+#tablero nav ul li a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color: #FFF;
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/*  Estilos relacionados a submenú*/
+
+/* Configuracion para resaltar submenus*/
+#tablero nav ul ul{
+    margin-left:10px;
+    border-left: #fff 0.7px solid;
+}
+/*      icono de submenú*/
+#tablero > nav ul li  a > .ion-chevron-down{
+    font-size: 11px;
+    text-align: center;
+    float:right;
+    border-radius: 90px;
+    transition: transform 0.2s;
+
+}
+#tablero > nav ul > li:hover > a .ion-chevron-down{
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg)
+}
+/*      Submenú*/
+#tablero > nav >ul >li ul{
+    background: #2A3F54;
+    
+}
+/*      Efectos submenu*/
+
+#tablero nav ul li{
+    max-height: 40px;
+    overflow: hidden;
+    -webkit-transition: max-height 1.5s;
+    transition: max-height 1.5s, border 0.2s;
+    position:relative;
+}
+#tablero nav ul li:hover{
+    max-height: 400px;
+    background-color: #445b72;
+    /* border-bottom: 0.8px rgb(230, 230, 230) solid; */
+    
+}
+
+#tablero nav ul li::after{
+    content: "";
+    width: 0px;
+    display: block;
+    height: 1px;
+    transition: width 1s;
+    position: relative;
+    left: 0px;
+    bottom: 0px;
+    background-color: #fff;
+}
+#tablero nav ul li:hover::after{
+    width: 100%;
+}
+
+#tablero footer{
+    min-height: 40px;
+    display: inline-block;
+    bottom: 0;
+    position:fixed ;
+    bottom: 0px;
+    width: 20%;
+    background-color:#1b2b3b;
+
+}
+
+/*
+    Estilos de despliegue
+*/
+.nueva-linea{
+    display: block;
+}
+
+/* 
+    ====================================
+    CONFIGURACIÓN  DE ESTILOS DEL ESPACIO PRINCIPAL
+    ====================================
+*/
+
+.cabecera-principal{
+    display: block;
+    width: 100%;
+    height: 80px;
+    padding-left:20px;
+    background-color: lightgray;
+}
+
+.caja-informacion{
+    display: inline-block;
+    min-width: 150px;
+    min-height: 80px;
+    border-radius: 5px;
+    border: rgb(84, 196, 168) 1px solid;
+}
+
+.caja-informacion h3{
+    font-size: 30px;
+    font-weight: 100;
+    text-align: center;
+    padding: 10%;
+}
+
+.contenido{
+    padding: 20px;
+}
+
+
+
+#tablero > nav >ul .activo, #tablero > nav >ul .activo:hover{
+    background-color: rgb(18, 184, 54);
+}
