@@ -1,9 +1,3 @@
-
-
-*{
-    margin: 0;
-    box-sizing: border-box;
-}
 /* 
     ====================================
     CONFIGURACIÓN GLOBAL DE ESTILOS
@@ -12,17 +6,21 @@
 
 body{ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
 body, #tablero, #tablero > nav >ul li{
-    background-color: #2A3F54;
+    background-color: #304961;
 }
+
+
+.contenedor{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
 #tablero{
-    display: block;
-    float: left;
     width: 20%;
-   
+    overflow: hidden;
 }
 #principal{
-    display: block;
-    float: left;
     width: 80%;
     min-height: 100vh;
     height: auto;
@@ -38,11 +36,6 @@ body, #tablero, #tablero > nav >ul li{
     ====================================
 */
 
-/* #tablero header{
-    position: fixed;
-    display: block;
-    width: 20%;
-} */
 /* 
     -- Estilos del header del tablero --
 */
@@ -63,7 +56,7 @@ section.info-usuario figure img{
     vertical-align: middle;
 }
 section.info-usuario figure figcaption{
-    width: 50%px;
+    width: 50px;
     display: inline-block;
     margin-left: 10px;
     vertical-align: middle;
@@ -75,18 +68,23 @@ section.info-usuario figure figcaption{
 */
 #tablero nav #titulo-navegacion{
     color: #fff;
-    text-transform: uppercase;
-    margin-top: 5px;
+    text-transform: capitalize;
+    margin-top: 15px;
+    margin-bottom: 15px;
     padding-left: 10px;
+    text-align: center;
 }
 #tablero nav ul{
     list-style: none;
-    padding: 0px;
 }
+
+
+#tablero > nav > ul > li{
+    border: #445b72 1px outset;
+}
+
 #tablero > nav >ul >li{
     border: #445b72 1px outset;
- 
-  
 }
 
 #tablero nav ul li a{
@@ -100,12 +98,14 @@ section.info-usuario figure figcaption{
     box-sizing: border-box;
 }
 
+
+
 /*  Estilos relacionados a submenú*/
 
 /* Configuracion para resaltar submenus*/
 #tablero nav ul ul{
-    margin-left:10px;
-    border-left: #fff 0.7px solid;
+    margin-left:6px;
+    border-left: #59697a 2px solid;
 }
 /*      icono de submenú*/
 #tablero > nav ul li  a > .ion-chevron-down{
@@ -113,18 +113,14 @@ section.info-usuario figure figcaption{
     text-align: center;
     float:right;
     border-radius: 90px;
-    transition: transform 0.2s;
+    transition: transform 0.5s;
 
 }
 #tablero > nav ul > li:hover > a .ion-chevron-down{
     -webkit-transform: rotate(180deg);
     transform: rotate(180deg)
 }
-/*      Submenú*/
-#tablero > nav >ul >li ul{
-    background: #2A3F54;
-    
-}
+
 /*      Efectos submenu*/
 
 #tablero nav ul li{
@@ -132,12 +128,10 @@ section.info-usuario figure figcaption{
     overflow: hidden;
     -webkit-transition: max-height 1.5s;
     transition: max-height 1.5s, border 0.2s;
-    position:relative;
 }
 #tablero nav ul li:hover{
     max-height: 400px;
-    background-color: #445b72;
-    /* border-bottom: 0.8px rgb(230, 230, 230) solid; */
+    background-color: #2e4963;
     
 }
 
@@ -146,30 +140,32 @@ section.info-usuario figure figcaption{
     width: 0px;
     display: block;
     height: 1px;
-    transition: width 1s;
+    transition: width 2s;
     position: relative;
     left: 0px;
     bottom: 0px;
     background-color: #fff;
 }
+
 #tablero nav ul li:hover::after{
     width: 100%;
 }
 
 #tablero footer{
     min-height: 40px;
-    display: inline-block;
-    bottom: 0;
-    position:fixed ;
+    display: block;
+    position: fixed;
     bottom: 0px;
     width: 20%;
     background-color:#1b2b3b;
-
 }
+
+
 
 /*
     Estilos de despliegue
 */
+
 .nueva-linea{
     display: block;
 }
@@ -181,15 +177,15 @@ section.info-usuario figure figcaption{
 */
 
 .cabecera-principal{
-    display: block;
+    display: flex;
     width: 100%;
     height: 80px;
-    padding-left:20px;
-    background-color: lightgray;
+    background-color: #eeeeee;
 }
 
 .caja-informacion{
     display: inline-block;
+    margin-left: 20px;
     min-width: 150px;
     min-height: 80px;
     border-radius: 5px;
@@ -207,8 +203,67 @@ section.info-usuario figure figcaption{
     padding: 20px;
 }
 
+.cabecera-principal #mostrar-menu{
+    width: 50px;
+    padding: 10px 20px;
+    margin: 10px 20px;
+    background-color: #eeeeee;
+    font-size: 30px;
+    color:  #304961;
+    float: right;
+    display: none;
+}
+
+.cabecera-principal #cerrar-menu{
+    margin-left: 240px;
+    width: 50px;
+    font-size: 30px;
+    color:#304961;
+    float: right;
+    text-align: center;
+    display: none;
+}
+
 
 
 #tablero > nav >ul .activo, #tablero > nav >ul .activo:hover{
-    background-color: rgb(18, 184, 54);
+    background-color: rgb(51, 177, 78);
 }
+
+/* 
+    ====================================
+    Media Queries
+    ====================================
+*/
+
+/*
+    Navegacion
+*/
+
+@media screen and (max-width: 900px){
+    #tablero{
+        height: 100%;
+        position: fixed;
+        left: 0;        
+        display: none;
+        overflow: hidden;
+        
+    }
+    #footer{
+        display: none;
+    }
+
+    #principal{
+        width: 100%;
+    }
+    .cabecera-principal #mostrar-menu{
+        display: block;        
+    }
+}
+
+
+
+
+
+
+
