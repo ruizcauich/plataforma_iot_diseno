@@ -7,9 +7,10 @@
     <!--<meta http-equiv="refresh" content="2; url=index.html">-->
     <title>Panel de control</title>
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" href="static/css/dashboard/style.css">
-    <link rel="stylesheet" href="static/css/dashboard/elementos-resumen.css">
+    <link rel="stylesheet" href="static/css/dashboard/vis.min.css">
     <link rel="stylesheet" href="static/css/botones.css">
+    <link rel="stylesheet" href="static/css/dashboard/style.css">
+    <link rel="stylesheet" href="static/css/dashboard/index.css">
 </head>
 <body>
     <div class="contenedor">
@@ -24,7 +25,7 @@
                     <figure>
                         <img src="static/img/avatar/usr.jpg" alt="avatar">
                         <figcaption>
-                            <span class="nueva-linea">¡Bienvenido</span>
+                            <span class="nueva-linea">¡Bienvenido!</span>
                             <span class="nueva-linea"><strong>Augusto Ruiz</strong></span>
                         </figcaption>
                     </figure>
@@ -34,7 +35,7 @@
                 <h1 id="titulo-navegacion">Menú</h1>
                 <ul>
                     <li class="activo"><a href="#">Mis proyectos.</a></li>
-                    <li class="submenu"><a href="#">item <span class="ion-chevron-down"></span></a>
+                    <li class="submenu"><a href="#">Dispositivos <span class="ion-chevron-down"></span></a>
                         <ul>
                             <li><a href="#">subitem</a></li>
                             <li><a href="#">subitem</a></li>
@@ -45,24 +46,67 @@
                                 </ul>
                         </ul>
                     </li>
-                    <li><a href="#">item</a></li>
-                    <li><a href="#">item</a></li>
+                    <li><a href="#">Sensores</a></li>
+                    <li><a href="#">Reportes</a></li>
                 </ul>
             </nav>
-            <footer id="footer">
-                Footer
+            <footer>
+                <span class="ion-log-out"></span>
+                <span class="ion-android-settings"></span>
             </footer>
         </aside>
-        <div id="principal">
+        <main id="principal">
             <header class="cabecera-principal">
-                
-               
+                <h1 class="titulo-cabecera">Panel De Control</h1>
             </header>
 
-            <div class="contenido"></div>
-        </div>
+            <div class="contenedor-articulos">
+                <article class="articulo">
+                    <div class="articulo-header">
+                        <h2 class="titulo-articulo">Proyectos</h2>
+                        <span class="articulo-descripcion">Tus proyectos IoT...</span>
+                    </div>
+                    <div class="articulo-contenido">
+                        <span class="ion-network"></span>
+                        <span class="numero">3</span>
+                        <a href="" class="boton boton-informacion">Ver mas..</a>
+                    </div>
+                </article>
+                <article class="articulo">
+                        <div class="articulo-header">
+                            <h2 class="titulo-articulo">Dispositivos</h2>
+                            <span class="articulo-descripcion">Componentes de tus proyectos IoT...</span>
+                        </div>
+                        <div class="articulo-contenido">
+                            <span class="ion-ipad"></span>
+                            <span class="numero">25</span>
+                            <a href="" class="boton boton-informacion">Ver mas..</a>
+                        </div>
+                </article>
+                <article class="articulo">
+                        <div class="articulo-header">
+                            <h2 class="titulo-articulo">Sensores</h2>
+                            <span class="articulo-descripcion">Escuchan a su alrededor....</span>
+                        </div>
+                        <div class="articulo-contenido">
+                            <span class="ion-headphone"></span>
+                            <span class="numero">100</span>
+                            <a href="" class="boton boton-informacion">Ver mas..</a>
+                        </div>
+                </article>
+                <article class="articulo">
+                        <div class="articulo-header">
+                            <h2 class="titulo-articulo">Reportes</h2>
+                            <span class="articulo-descripcion">Entiende lo que las cosas te quieren decir...</span>
+                        </div>
+                        <div class="articulo-contenido">
+                            <span class="ion-clipboard"></span>
+                            <span class="numero">0</span>
+                            <a href="" class="boton boton-informacion">Ver mas..</a>
+                        </div>
+                </article>
+            </div>
+        </main>
     </div>
-
-   
 </body>
 </html>

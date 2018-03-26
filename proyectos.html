@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--<meta http-equiv="refresh" content="2; url=index.html">-->
+    <title>Proyectos</title>
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="static/css/dashboard/vis.min.css">
+    <link rel="stylesheet" href="static/css/botones.css">
+    <link rel="stylesheet" href="static/css/dashboard/style.css">
+    <link rel="stylesheet" href="static/css/dashboard/proyectos.css">
+</head>
+<body>
+    <div class="contenedor">
+        <input type="checkbox" name="check-mostrar" id="check-mostrar">
+        <label for="check-mostrar" id='mostrar-menu' class="ion-navicon-round" ></label>
+        <aside id="tablero">
+            <header>
+                <figure class="marca">
+                    <img src="static/img/logo.png" alt="This is the logo">
+                </figure>
+                <section class="info-usuario">
+                    <figure>
+                        <img src="static/img/avatar/usr.jpg" alt="avatar">
+                        <figcaption>
+                            <span class="nueva-linea">¡Bienvenido!</span>
+                            <span class="nueva-linea"><strong>Augusto Ruiz</strong></span>
+                        </figcaption>
+                    </figure>
+                </section>
+            </header>
+            <nav>
+                <h1 id="titulo-navegacion">Menú</h1>
+                <ul>
+                    <li class="activo"><a href="#">Mis proyectos.</a></li>
+                    <li class="submenu"><a href="#">Dispositivos <span class="ion-chevron-down"></span></a>
+                        <ul>
+                            <li><a href="#">subitem</a></li>
+                            <li><a href="#">subitem</a></li>
+                            <li class="submenu"><a href="#">subitem <span class="ion-chevron-down"></span></a>
+                                <ul>
+                                    <li><a href="#">subitem</a></li>
+                                    <li><a href="#">subitem</a></li>
+                                </ul>
+                        </ul>
+                    </li>
+                    <li><a href="#">Sensores</a></li>
+                    <li><a href="#">Reportes</a></li>
+                </ul>
+            </nav>
+            <footer>
+                <span class="ion-log-out"></span>
+                <span class="ion-android-settings"></span>
+            </footer>
+        </aside>
+        <main id="principal">
+            <header class="cabecera-principal">
+                <h1 class="titulo-cabecera">Proyectos de Red</h1>
+            </header>
+
+            <table class="tabla-proyectos">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Dispositivos</th>
+                    <th>Sensores</th>
+                    <th>Descripción</th>
+                    <th>Opciones</th>
+                </tr>
+                <tr>
+                    <td>Bahía de Chetumal</td>
+                    <td>16</td>
+                    <td>50</td>
+                    <td>Proyecto que se encarga de leer datos de la calidad del agua en la bahía...</td>
+                    <td class="opciones"><a href=""><span class="ion-eye"></span></a></td>
+                    <td class="opciones"><a href=""><span class="ion-edit"></span></a></td>
+                    <td class="opciones"><a href=""><span class="ion-trash-a"></a></span></td>
+                </tr>
+                <tr>
+                    <td>Invernadero del CTBA11</td>
+                    <td>10</td>
+                    <td>18</td>
+                    <td>Proyecto que automatiza los procesos de riego del Invernadero del CTBA 11...</td>
+                    <td class="opciones"><a href=""><span class="ion-eye"></span></a></td>
+                    <td class="opciones"><a href=""><span class="ion-edit"></span></a></td>
+                    <td class="opciones"><a href=""><span class="ion-trash-a"></a></span></td>
+                </tr>
+                <tr>
+                    <td>Laboratorio de Arquitectura</td>
+                    <td>12</td>
+                    <td>24</td>
+                    <td>Proyecto que Mide los niveles comfort en el edificio nuevo de Arquitectura...</td>
+                    <td class="opciones"><a href=""><span class="ion-eye"></span></a></td>
+                    <td class="opciones"><a href=""><span class="ion-edit"></span></a></td>
+                    <td class="opciones"><a href=""><span class="ion-trash-a"></a></span></td>
+                </tr>
+                <tr>
+                    <td>Invernadero UcumSa</td>
+                    <td>12</td>
+                    <td>24</td>
+                    <td>Proyecto que Mide los procesos de riego y las variables del Invernadero de Uc...</td>
+                    <td class="opciones"><a href=""><span class="ion-eye"></span></a></td>
+                    <td class="opciones"><a href=""><span class="ion-edit"></span></a></td>
+                    <td class="opciones"><a href=""><span class="ion-trash-a"></a></span></td>
+                </tr>
+                <a href="" class="boton boton-informacion visualizar">Visualizar Proyectos</a>
+            </table>
+
+        </main>
+    </div>
+</body>
+</html>

@@ -10,23 +10,44 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
 }
-body{ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 16px; font-weight: 100;}
 
-body, #tablero, #tablero > nav >ul li{
-    background-color: #304961;
+@font-face{
+    font-family: "Nunito";
+    src:url('../fonts/Nunito-Regular.ttf');
 }
 
+@font-face{
+        font-family: "Raleway";
+        src:url('../fonts/Raleway-Regular.ttf');
+}
+
+
+body,textarea{ font-family: 'Nunito','Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 16px; font-weight: 100; position: relative}
+
+
+body, #tablero, #tablero > nav >ul li{background-color: #304961;}
+
+h1,h2,h3,h4{
+    font-family: 'Raleway', sans-serif , cursive;
+}
 
 .contenedor{
     width: 100%;
     height: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
 }
 
 #tablero{
     width: 20%;
     overflow: hidden;
+    z-index: 2; 
 }
+
+
 #principal{
     width: 80%;
     min-height: 100vh;
@@ -186,10 +207,22 @@ section.info-usuario figure figcaption{
 */
 
 .cabecera-principal{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     width: 100%;
     height: 80px;
-    background-color: #eeeeee;
+    background-color: #f7f7f7;
+}
+
+.titulo-cabecera{
+    /*font-family: 'Raleway', cursive;*/
+    font-size: 25px;
+    color: #2b4053;
+    margin: 10px auto;
+    padding: 17px 0;
 }
 
 .caja-informacion{
@@ -231,7 +264,7 @@ section.info-usuario figure figcaption{
     width: 50px;
     padding: 10px 20px;
     margin: 10px 0px;
-    background-color: #eeeeee;
+    background-color: #f7f7f7;
     font-size: 30px;
     color:  #304961;
     /* float: right; */
@@ -243,6 +276,33 @@ section.info-usuario figure figcaption{
 
 #check-mostrar{
     display: none;
+}
+
+/* 
+    ====================================
+    Footer
+    ====================================
+*/
+
+footer{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+footer span{
+    font-size: 25px;
+    color: #b7c3ce;
+    margin-left: 27%;
+    transition: all 0.2s ease;
+}
+
+footer span:hover{
+    cursor: pointer;
+    color: #d9dde0;
+
 }
 
 
@@ -276,9 +336,10 @@ section.info-usuario figure figcaption{
 
 @media screen and (max-width: 640px) {
     #tablero{width: 60%; left: -60%}
-    #tablero footer{width: 60%; }
+    #tablero footer{width: 60%;}
     #check-mostrar:checked ~#tablero{left: 0%;}
     #check-mostrar:checked ~#mostrar-menu{left: 60%;}
+
     
 }
 @media screen and (max-width: 440px) {
@@ -286,6 +347,7 @@ section.info-usuario figure figcaption{
     #tablero footer{width: 75%; }
     #check-mostrar:checked ~#tablero{left: 0%;}
     #check-mostrar:checked ~#mostrar-menu{left: 75%;}
+    .titulo-cabecera{font-size: 15px;}
     
 }
 

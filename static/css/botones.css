@@ -10,9 +10,9 @@
     border-radius: 5px;
     color:#fff;
     text-align: center;
-    font-size: 12px;
+    font-size: 14px;
     cursor: pointer;
-    color:#000;
+    text-decoration: none;
 }
 .boton:hover{
     box-shadow:1px 2px 100px #c5c5c5 inset;
